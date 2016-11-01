@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 徐宗亮(Hosea Hsu)
-subtitle: 热爱深度学习的视觉算法工程师
-author: 徐宗亮(Hosea Hsu)
+title: 张学武(Shaw)
+subtitle: Artificial Intelligence Innovation Laboratory
+author: shaw 
 language: 
 timezone: 
 
 # custom Site settings
 # more detail check out docs
-SEOTitle: 徐宗亮(Hosea Hsu)的博客
+SEOTitle: 张学武(Shaw)的博客
 header-img: http://o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg
-email: hoseahsu@gmail.com
-description: "徐宗亮在 Github 上的个人博客"
-keyword: 深度学习 博客 个人 徐宗亮 HoseaHsu# seo key words
+email: aiishaw@126.com
+description: "张学武　在Github 上的个人博客"
+keyword: 深度学习 博客 个人 张学武 Shaw# seo key words
 
 # custom end
 
@@ -28,11 +28,11 @@ permalink_defaults:
 
 # SNS settings
 # RSS:
-weibo_username: hoseahsu
-zhihu_username: hoseahsu
-github_username: hoseahsu
-twitter_username: hoseahsu
-facebook_username: hoseah5u
+weibo_username: 
+zhihu_username: 
+github_username: aiilab
+twitter_username: 
+facebook_username: 
 linkedin_username: 
 
 # Build settings
@@ -40,10 +40,10 @@ anchorjs: false                        # if you want to customize anchor. check 
 
 
 # Disqus settings 
-disqus_username: hsoea-hsu
+disqus_username:  
 
 # Duoshuo settings
-duoshuo_username: hosea
+duoshuo_username:  
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
@@ -52,11 +52,11 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Baidu Analytics
 ba_track_id: b2dec27247a6a21a0f13cd9e5c79ca8e
 # Google Analytics
-ga_track_id: 'UA-84872458-1'            # Format: UA-xxxxxx-xx
-ga_domain: blog.hosea.xyz
+ga_track_id:             # Format: UA-xxxxxx-xx
+ga_domain: 
 
 # Sidebar settings
-sidebar-about-description: 热爱深度学习的视觉算法工程师
+sidebar-about-description: AI R&D 
 sidebar-avatar:  /about/shaw.jpg
 
 
@@ -127,9 +127,9 @@ theme: Anisina
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: 
-  repo: 
-  branch: 
+  type: git 
+  repo: git@github.com:aiilab/blog.git 
+  branch: gh-pages 
 
 
 # img CDN path
@@ -138,7 +138,7 @@ cdn-url:  # 你的CDN地址
 # Qiniu imageView2 API
 # More info http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html
 clip-content: "?imageView2/1/w/1400/h/400/interlace/1/q/90"
-clip-avatar: "?imageView2/2/w/300/h/300/interlace/1/q/90"
+clip-avatar: "?imageView2/2/w/200/h/200/interlace/1/q/90"
 clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 
 # post default images
