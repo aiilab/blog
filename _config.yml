@@ -57,8 +57,8 @@ ga_domain:
 
 # Sidebar settings
 sidebar-about-description: AI R&D in AiiLab     
-sidebar-avatar:  /about/shaw.jpg
-
+sidebar-avatar:  /img/shaw.jpg
+favicon: /img/shaw.jpg
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
