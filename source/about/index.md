@@ -11,7 +11,7 @@ tags: about
 ![image](/about/aboutme.jpg)
 
 ## 程序员改变世界
-其实，程序员百分之十零点一的时间在想着改变世界，剩下百分之九十九点九都在调bug
+其实，程序员百分之十零点零一的时间在想着改变世界，剩下百分之九十九点九都在调bug
 ![image](/about/aboutme2.jpg)
 
 ## 人工智能创新实验室—AiiLab
@@ -33,5 +33,5 @@ tags: about
 
 
 *点击选择下面的付款方式，请我喝杯咖啡吧*
-<iframe src="http://hosea.xyz/donate2me/?item=easy-select-style" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+<iframe src="http://aiilab.com/donate2me/?item=easy-select-style" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
 
