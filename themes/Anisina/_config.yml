@@ -142,7 +142,7 @@ clip-avatar: "?imageView2/2/w/200/h/200/interlace/1/q/90"
 clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 
 # post default images
-post-default-img: img/post-default.jpg #博文默认的图片
+post-default-img: #博文默认的图片
 post-default-img-mobile: #移动端显示的图片
 
 # search api , set your custom key

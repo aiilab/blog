@@ -12,7 +12,7 @@ timezone:
 # custom Site settings
 # more detail check out docs
 SEOTitle: 张学武(Shaw)的博客
-header-img: http://o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg
+header-img: 
 email: aiishaw@126.com
 description: "张学武　在Github 上的个人博客"
 keyword: 深度学习 博客 个人 张学武 Shaw# seo key words
@@ -21,7 +21,7 @@ keyword: 深度学习 博客 个人 张学武 Shaw# seo key words
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.hosea.xyz
+url: http://www.aiilab.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -57,8 +57,8 @@ ga_domain:
 
 # Sidebar settings
 sidebar-about-description: AI R&D in AiiLab     
-sidebar-avatar:  /img/shaw.jpg
-favicon: /img/shaw.jpg
+sidebar-avatar: http://cdnshaw.hosea.pw/img/shaw.jpg 
+favicon: http://cdnshaw.hosea.pw/img/shaw.jpg
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
@@ -133,7 +133,7 @@ deploy:
 
 
 # img CDN path
-cdn-url: cdnshaw.hosea.pw  # 你的CDN地址
+cdn-url: http://cdnshaw.hosea.pw  # 你的CDN地址
 
 # Qiniu imageView2 API
 # More info http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html
@@ -142,8 +142,8 @@ clip-avatar: "?imageView2/2/w/200/h/200/interlace/1/q/90"
 clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 
 # post default images
-post-default-img: /img/post-default.jpg #博文默认的图片
-post-default-img-mobile: #移动端显示的图片
+post-default-img: http://cdnshaw.hosea.pw/img/post-default.jpg #博文默认的图片
+post-default-img-mobile: http://cdnshaw.hosea.pw/img/post-default.jpg #移动端
 
 # search api , set your custom key
 swiftype_key: 

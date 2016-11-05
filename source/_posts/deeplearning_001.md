@@ -1,6 +1,8 @@
 ---
 title: 深度学习与神经元 
 date: 2016-11-02 09:12:43
-tags: 深度学习
+tags: 
+    - 深度学习
+    - DeepLearning
 header-img: /img/neuron.jpg 
 ---
