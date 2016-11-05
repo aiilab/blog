@@ -52,8 +52,8 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Baidu Analytics
 ba_track_id: b2dec27247a6a21a0f13cd9e5c79ca8e
 # Google Analytics
-ga_track_id:             # Format: UA-xxxxxx-xx
-ga_domain: 
+ga_track_id: UA-86910185-1        # Format: UA-xxxxxx-xx
+ga_domain: blog.aiilab.com 
 
 # Sidebar settings
 sidebar-about-description: AI R&D in AiiLab     
