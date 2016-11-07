@@ -140,7 +140,7 @@ hexo n "test"  // hexo new "test",建立一篇名为test的博客
 ```
 hexo g // hexo generate 编译
 hexo s // hexo server 本地模拟，打开http://localhost:4000查看博客效果，如果4000端口被占用，可以利用hexo s -p 4001
-hexo d //部署到github, 可以通过www.你的域名.com进行访问了
+hexo d // hexo deploy部署到github, 可以通过www.你的域名.com进行访问了
 ```
 至此，博客搭建完毕！
 ## Step 4. 多台电脑之间同步
