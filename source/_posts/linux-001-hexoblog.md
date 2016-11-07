@@ -4,42 +4,25 @@ date: 2016-11-01 12:00:00
 tags:
     - Hexo
     - Linux 
-	- Github Pages
 header-img: /img/post-default.jpg
 ---
-如何优雅的搭建个人独立博客？
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+# 如何优雅的搭建个人独立博客？
+## 前言
+作为一个前端小白（其实，我是一个[算法工程师](http://blog.aiilab.com/about/)），想自己搭个博客来玩一下。主要是最近突然想起了一个觉得屌炸天的域名——人工智能创新实验室（[www.aiilab.com](www.aiilab.com)）。遂折腾了一下，以此写写博客，纪录自己在AI领域的拙见，与同行多多交流。所以简单总结了一下自己从申请域名到发布博客文章的流程，并实现多台电脑同步。
+## 基本流程
+先说一下我的情况，两台终端，一台是公司电脑安装了Linux系统（ubuntu14.04），一台是自己的Macbook pro。最终实现两台电脑同步控制。比如，在公司或者实验室电脑上写了一半博客，回到家或宿舍后又想继续写并发布，或者继续修改也ok，很方便。
 
-## Quick Start
+一般来讲，要想实现通过一个个人网站来访问博客**流程**如下：
+>* 首先，你得有个域名。比如，我自己申请的*[www.aiilab.com](aiilab.com)*。申请网站有很多，比如[godaddy](http://www.godaddy.com)、[万网](http://www.net.cn)、[西部数码](http://www.west.cn)等。本人是从西部数码申请的，价格都差不多。说真心的，现在申请个好域名真难，好多都被人注册了。据说，360为了买www.360.com花了8为数!!! 呵呵～
+>* 其次，有了域名那你得有个服务器放你的博客。所以得有一个服务器的地址。当你在浏览器输入比如www.aiilab.com的时候，会将这个域名映射到你博客的服务器上去。那域名咋映射到服务器上呢，这个只需要在你申请域名的网站上设置一下CNAME，其实就是别名，待会儿细说。
+>* 刚刚说了得有一个服务器放你的博客上去，一般国内服务器你可以用阿里的，但是有个问题，要钱！而且，党国规定，要想用国内的服务器就得到有关部门备案，否则，呵呵～。但是，机智的程序员们发现了可以用GitHub Pages的功能来搭建博客，Github Pages是啥玩意儿待会儿细说，说简单点呢，它就是放你博客的服务器。你只需要按它的规定把你的博客网页放到github上面就哦了。用github有两个好处。第一，服务器在国外，不用备案。第二，空间免费，不用花钱。另外，如果不想申请域名直接输入你的博客网页在github上的地址就行，如果自己申请了域名，那直接设置一下CNAME，将你的域名和你的博客github地址关联起来就ok。
+>* 等等，啥博客网页？难道要自己写网页？要骂人了，尼玛不会啊！当然是No！有个台湾的程序员叫Tommy Chen，他写了一个叫[Hexo](https://hexo.io)的工具，分分钟就可以把你的写的博客转化成浏览器能够解析的网页，官方术语为：Hexo 是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页。
+>* 基于上述情况，便可用Hexo+Github来搭建个人独立博客。
 
-### Create a new post
+纳尼，github也没听过？竟然连程序员交友网站都没有听过，那你肯定有女（男）朋友！如果没有用过github，那小小白用户需要了解一下以下内容：
+>* [git](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000) 
+>* [github pages](https://pages.github.com) 
+>* [hexo](https://hexo.io) 
+>* [Markdown](http://www.appinn.com/markdown/#autoescape)
 
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+废话说了这么多，目的是让小白用户能有一个大概的认识，接下来就一步一步实际操作就ok。
