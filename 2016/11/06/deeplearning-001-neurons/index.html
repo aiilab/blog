@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        深度学习与神经元｜张学武(Shaw)的博客
+        深度学习(Deep Learning)系列之(一)：深度学习与神经元｜张学武(Shaw)的博客
         
     </title>
 
@@ -163,7 +163,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>深度学习与神经元</h1>
+                    <h1>深度学习(Deep Learning)系列之(一)：深度学习与神经元</h1>
                     
                     <span class="meta">
                          作者 shaw
@@ -186,7 +186,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            深度学习与神经元
+            深度学习(Deep Learning)系列之(一)：深度学习与神经元
         </span>
     </div>
 </header>
@@ -197,11 +197,41 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <h2 id="深度学习与神经元"><a href="#深度学习与神经元" class="headerlink" title="深度学习与神经元"></a>深度学习与神经元</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为一个AI创业公司，不来点深度学习都不好意思说自己是搞人工智能的。很多专家批评现在人工智能、深度学习各种泡沫，而在我看来有泡沫也未尝不是好事。一方面，它让人工智能的概念深入人心，另一方面，泡沫之后剩下的也将是真正的用心去搞AI的那些人。比如，世界是我们的，也是人工智能机器人的，但归根结底，还是属于那些搞机器人的：）～～。</p>
+<p>对我一个从事CV行业的人来说，我是怀着一颗敬畏之心来看待deep learning的，一方面在于它不断地刷新着我的三观，人脸识别、人体检测、人体重识别(ReID)、物体检测与识别、图像分类、图像分割、显著性检测等几乎所有与视觉相关的研究课题与问题都被深度学习统治，那些搞传统cv的同事们，辛辛苦苦二十年，一夜回到解放前。另一方面，深度学习不但在视觉    ，而且在语音识别、自然语言处理等方面也取得了显著的成绩，在特定的问题，特定场景下甚至超过了人的能力，这在几年前是不可想象的。而这些人工智能技术的发展对我们创业者，比如搞智能机器人的来说，确实带来了很大的机遇（关于机器人相关的话题，我会在后续的博客当中谈谈在创业过程当中遇到的一些问题，和一些行业的认识，欢迎大家批评指正）。</p>
+<p>深度学习其实只是实现AI应用的一把利器，一个好工具。其仍有很多问题值得去好好研究，好好思考，需要好好静心学术。然而，我关心的是如何让深度学习技术更好的落地，产生更好的应用，让机器人更智能，让最新的研究成果造福普通百姓…..这也是我想写此系列博客的初衷。一方面解读一些深度学习相关的技术原理，尽可能以通俗、工程的方式去理解这些技术和研究成果，另一方面也算脚踏实地的去学习，构建自己的深度学习知识网络，以一颗敬畏之心感受深度学习的奥秘。</p>
+
                 <hr>
+                
+                <!-- 多说 Share start -->
+                <div class="ds-share"
+                     style="text-align: right"
+                     data-thread-key="2016/11/06/deeplearning-001-neurons/"
+                     data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
+                     data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/"
+                     data-images="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons//img/neuron.jpg"
+                     data-content="深度学习与神经元前言深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为... | 张学武(Shaw)的博客 ">
+                    <div class="ds-share-inline">
+                        <ul class="ds-share-icons-16">
+                            <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                            <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                            <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                            <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                        </ul>
+                        <div class="ds-share-icons-more">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <!-- 多说 Share end-->
                 
 
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/11/09/myrobot-001-basics/" data-toggle="tooltip" data-placement="top"
+                           title="我的机器人系列之(一)：家庭服务机器人？">&larr; Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
@@ -212,6 +242,16 @@
                 </ul>
 
                 
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                         data-thread-key="2016/11/06/deeplearning-001-neurons/"
+                         data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
+                         data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/">
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
 
                 
 
@@ -219,7 +259,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习与神经元"><span class="toc-text">深度学习与神经元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -270,6 +310,25 @@
     </div>
 </article>
 
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'aiilab';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user};
+    (function () {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
 
 
 

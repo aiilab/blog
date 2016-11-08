@@ -179,6 +179,9 @@
                         <a class="tag" href="/tags/#Linux"
                            title="Linux">Linux</a>
                         
+                        <a class="tag" href="/tags/#Github"
+                           title="Github">Github</a>
+                        
                     </div>
                 </div>
             </div>
@@ -197,13 +200,13 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1 id="如何优雅的搭建个人独立博客？"><a href="#如何优雅的搭建个人独立博客？" class="headerlink" title="如何优雅的搭建个人独立博客？"></a>如何优雅的搭建个人独立博客？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一个前端小白（其实，我是一个<a href="http://blog.aiilab.com/about/" target="_blank" rel="external">算法工程师</a>），想自己搭个博客来玩一下。主要是最近突然想起了一个觉得屌炸天的域名——人工智能创新实验室（<a href="www.aiilab.com">www.aiilab.com</a>）。遂折腾了一下，以此写写博客，纪录自己在AI领域的拙见，与同行多多交流。所以简单总结了一下自己从申请域名到发布博客文章的流程，并实现多台电脑同步。</p>
+                <h2 id="如何优雅的搭建个人独立博客？"><a href="#如何优雅的搭建个人独立博客？" class="headerlink" title="如何优雅的搭建个人独立博客？"></a>如何优雅的搭建个人独立博客？</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一个前端小白（其实，我是一个<a href="http://blog.aiilab.com/about/" target="_blank" rel="external">算法工程师</a>），想自己搭个博客来玩一下。主要是最近突然想起了一个觉得屌炸天的域名——人工智能创新实验室（<a href="www.aiilab.com">www.aiilab.com</a>）。遂折腾了一下，以此写写博客，纪录自己在AI领域的拙见，与同行多多交流。所以简单总结了一下自己从申请域名到发布博客文章的流程，并实现多台电脑同步。</p>
 <h2 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h2><p>先说一下我的情况，两台终端，一台是公司电脑安装了Linux系统（ubuntu14.04），一台是自己的Macbook pro。最终实现两台电脑同步控制。比如，在公司或者实验室电脑上写了一半博客，回到家或宿舍后又想继续写并发布，或者继续修改也ok，很方便。</p>
 <p>一般来讲，要想实现通过一个个人网站来访问博客<strong>流程</strong>如下：</p>
 <blockquote>
 <ul>
 <li>首先，你得有个域名。比如，我自己申请的<em><a href="aiilab.com">www.aiilab.com</a></em>。申请网站有很多，比如<a href="http://www.godaddy.com" target="_blank" rel="external">godaddy</a>、<a href="http://www.net.cn" target="_blank" rel="external">万网</a>、<a href="http://www.west.cn" target="_blank" rel="external">西部数码</a>等。本人是从西部数码申请的，价格都差不多。说真心的，现在申请个好域名真难，好多都被人注册了。据说，360为了买www.360.com花了8为数!!! 呵呵～</li>
-<li>其次，有了域名那你得有个服务器放你的博客。所以得有一个服务器的地址。当你在浏览器输入比如www.aiilab.com的时候，会将这个域名映射到你博客的服务器上去。那域名咋映射到服务器上呢，这个只需要在你申请域名的网站上设置一下CNAME，其实就是别名，待会儿细说。</li>
+<li>其次，有了域名那你得有个服务器放你的博客。所以得有一个服务器的地址。当你在浏览器输入比如www.aiilab.com的时候，会将这个域名映射到你博客的服务器上去。那域名咋映射到服务器上呢，这就需要域名解析，就是常听到的DNS，不过不用担心，这个只需要在你申请域名的网站上设置一下CNAME就ok，CNAME其实就是别名，设置好CNAME后，当你在浏览器输入域名后，就可以找到（映射）你博客所在的服务器的地址了。</li>
 <li>刚刚说了得有一个服务器放你的博客上去，一般国内服务器你可以用阿里的，但是有个问题，要钱！而且，党国规定，要想用国内的服务器就得到有关部门备案，否则，呵呵～。但是，机智的程序员们发现了可以用GitHub Pages的功能来搭建博客，Github Pages是啥玩意儿待会儿细说，说简单点呢，它就是放你博客的服务器。你只需要按它的规定把你的博客网页放到github上面就哦了。用github有两个好处。第一，服务器在国外，不用备案。第二，空间免费，不用花钱。另外，如果不想申请域名直接输入你的博客网页在github上的地址就行，如果自己申请了域名，那直接设置一下CNAME，将你的域名和你的博客github地址关联起来就ok。</li>
 <li>等等，啥博客网页？难道要自己写网页？要骂人了，尼玛不会啊！当然是No！有个台湾的程序员叫Tommy Chen，他写了一个叫<a href="https://hexo.io" target="_blank" rel="external">Hexo</a>的工具，分分钟就可以把你的写的博客转化成浏览器能够解析的网页，官方术语为：Hexo 是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页。</li>
 <li>基于上述情况，便可用Hexo+Github来搭建个人独立博客。</li>
@@ -219,20 +222,142 @@
 </ul>
 </blockquote>
 <p>废话说了这么多，目的是让小白用户能有一个大概的认识，接下来就一步一步实际操作就ok。</p>
+<h2 id="Step-1-域名申请及配置"><a href="#Step-1-域名申请及配置" class="headerlink" title="Step 1. 域名申请及配置"></a>Step 1. 域名申请及配置</h2><h3 id="域名申请及CNAME配置"><a href="#域名申请及CNAME配置" class="headerlink" title="域名申请及CNAME配置"></a>域名申请及CNAME配置</h3><p>这部分就比较简单了，我在西部数码买的，输入想要买的域名，确定没被别人注册之后便可付款购买。购买完以后需要对其进行设置，以我申请的aiilab.com域名为例，其域名解析设置如下：<br><img src="http://cdnshaw.hosea.pw/linux-001-hexoblog/dns2.jpg" alt="dns"><br>可以先按照图片当中的进行设置，但是需要将<code>aiilab</code>改成你申请的域名，即<code>你的域名.github.io</code>。下面简单介绍下域名解析各种设置是啥意思(以我的域名为例)：</p>
+<blockquote>
+<ul>
+<li>www表示，我想输入www.aiilab.com进行访问</li>
+<li>@表示直接解析主域名，即<code>aiilab.com</code>。意思就是当你在浏览器输入aiilab.com的时候，不用输入www.也可以直接访问。即跳转到<code>aiilab.github.io</code>(即github放博客服务器的地址)</li>
+<li>*表示泛域名解析，即<code>*.aiilab.com</code>。意思就是无论你在浏览器输入<code>xxx.aiilab.com</code>的时候，它都会跳转到你CNAME对应的<code>aiilab.github.io</code>上去。比如，你随便输入<code>blog.aiilab.com</code>，就会将这个定向到aiilab.github.io.</li>
+<li>blog 表示我想通过blog.aiilab.com来访问我的博客</li>
+</ul>
+</blockquote>
+<p><strong>注意注意注意</strong>：不要设置泛解析，否则任何人都可以用你的子域名来做博客了。比如，别人在人家的github账号下建了一个叫music的工程，CNAME设置为music.aiilab.com。那在浏览器输入music.aiilab.com的时候尼玛竟然跑到人家的博客去了，*.aiilab.com都是我的域名好不好！！！为啥呢，因为路径是这样的，music.aiilab.com-&gt;*.aiilab.com-&gt;aiilab.github.io-&gt;(然后在所有github工程里面去找CNAME设置为music.aiilab.com的那个工程，当然就找到别人家去了)<br><em>Danger: Do not use wildcard DNS records (e.g. \</em>.example.com) with GitHub Pages! A wildcard DNS record will allow anyone to host a GitHub Pages site at one of your subdomains.*</p>
+<p>先设置这两个就ok。好，第一步结束！</p>
+<h3 id="github解析博客原理-可以跳过"><a href="#github解析博客原理-可以跳过" class="headerlink" title="github解析博客原理(可以跳过)"></a>github解析博客原理(可以跳过)</h3><p>为了更好的说明github是如何解析github pages的，现在我们来做个实验，首先按照上图设置CNAME即打开终端，依次输入：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">dig www.aiilab.com +nostats +nocomments +nocmd</div><div class="line">dig aiilab.com +nostats +nocomments +nocmd</div><div class="line">dig blog.aiilab.com +nostats +nocomments +nocmd</div><div class="line">dig aiilab.github.io +nostats +nocomments +nocmd</div><div class="line">dig dhyyag.github.io +nostats +nocomments +nocmd</div><div class="line">dig bvlc.github.io +nostats +nocomments +nocmd</div></pre></td></tr></table></figure></p>
+<p>如下图所示：可以看到<br><img src="http://cdnshaw.hosea.pw/linux-001-hexoblog/dig2.jpg" alt="dig"></p>
+<blockquote>
+<ul>
+<li>www.aiilab.com、aiilab.com和blog.aiilab.com已经映射到aiilab.github.io，用的是CNAME，即别名</li>
+<li>*.github.io　即所有的*.github.io都映射到github.map.fastly.net，用的是CNAME，即别名</li>
+<li>而github.map.fastly.net最终映射到了一个IP地址，即151.101.16.133(也有可能是151.101.*.133）. 直接映射到IP为A记录。</li>
+<li>最后一点很重要，分两部分：<br>１、当你在浏览器输入xxx.github.io的时候，此时映射到最终的一个IP地址151.101.16.133，拿到的域名为xxx.github.io，此时由这个IP地址来去找CNAME为xxx.github.io的github项目(CNAME会映射为相应的域名)。然而xxx.github.io是唯一的，所以不需要CNAME也ok。<br>２、当你输入www.aiilab.com、aiilab.com、blog.aiilab.com这些域名时，(把这些地址想象为快递)最终都将映射到同一个IP地址(当成中转站)。然后由这个中转站去解析github所有工程里面CNAME对应的域名和输入的域名相同的github peoject　(CNAME和github project项目一一对应)。哎呀，妈呀，太费劲了。上个图来说吧。<br><img src="http://cdnshaw.hosea.pw/linux-001-hexoblog/gitdns.jpg" alt="gitdns"><br>例如，我的github里面有一个名为blog的项目，其中gh-pages分支放我的博客内容。我将gh-pages分支里的CNAME设置为blog.aiilab.com。当你输入blog.aiilab.com的时候，DNS会解析为aiilab.github.io,然后最终会映射到IP为151.101.*133的中转站，然后从CNAME表中去查询输入的域名，即blog.aiilab.com，发现一个叫blog的项目的CNAME为刚好好输入的域名相同，那就直接解析blog这个项目gh-pages的对应的博客网页，就可以看到博客内容了。</li>
+</ul>
+</blockquote>
+<h2 id="Step-2-git及github设置"><a href="#Step-2-git及github设置" class="headerlink" title="Step 2. git及github设置"></a>Step 2. git及github设置</h2><h3 id="什么是git"><a href="#什么是git" class="headerlink" title="什么是git?"></a>什么是git?</h3><p>git是什么鬼？<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git是目前世界上最先进的分布式版本控制系统（没有之一）</a>。这块我就不多数了，有很多很好的教程和博客，在此推荐<a href="http://www.liaoxuefeng.com/" target="_blank" rel="external">廖雪峰</a>写的git教程，写的非常棒，堪称史上最浅显易懂的Git教程！强烈推荐！</p>
+<h3 id="什么是github"><a href="#什么是github" class="headerlink" title="什么是github?"></a>什么是github?</h3><p><a href="https://github.com/" target="_blank" rel="external">GitHub</a> 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。其实，我觉得Github才是程序员专业的社交平台。利用该平台，程序员可以托管自己的各种项目，装扮自己的空间，如果项目好，就会有很多人给你点赞(star)， 遇到有啥问题，还可以在项目里留言，会有大神为你解答，如果有你感兴趣的项目，你还可以提交代码，做贡献。总之，git功能强大，而github连接了全世界的程序员。当然，github托管开源项目是不收费的，我们的博客一般都是为了让别人看，所以肯定是开源的。私人仓库（托管自己项目的地方）是收费的，所以出现了很多类似github网站的东东。比如公司里用的gitlab、国内还有gitcafe等，套路都是一样的。</p>
+<h3 id="什么是github-pages"><a href="#什么是github-pages" class="headerlink" title="什么是github pages?"></a>什么是github pages?</h3><p>废话少说，先注册一个<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号再说，注册很简单，我的注册用户名是aiilab。接下来大概说说<a href="https://pages.github.com" target="_blank" rel="external">Github Pages</a>是啥东东？其实，Github Pages就是github的网页呗，刚刚说了Github不是交友平台么，那你不得整个网页介绍一下你自己(或你的组织)怎么怎么牛逼么？所以User/Organization Page就是来干这事的。因为一个账号对应一个用户，所以User Page只能有一个。一般来讲只要将你的展示页面放到username.github.io这个项目的master分支下，就可以用<code>http(s)://username.github.io</code>来访问你的博客了，比如输入<a href="http://aiilab.github.io" target="_blank" rel="external">http(s)://aiilab.github.io</a>就可以访问我的博客了，因为我设置了CNAME，所以跟输入<a href="http://www.aiilab.com">www.aiilab.com</a>是一样一样的。 另外，github 不是可以托管项目么，那你不得整个网页介绍下项目么，所以Project Pages就是用来展示你的项目的。当然项目有很多个，所以Project Pages可以有多个，所以你也可以将你的博客页面放到<code>projectname</code>这个项目的<code>gh-pages</code>分支下，就可以用<code>http(s)://username.github.io/projectname</code>来访问你的博客了。比如，我在github上建立一个blog项目，其中gh-pages分支用来放博客的内容。所以也可通过<a href="http://aiilab.github.io/blog" target="_blank" rel="external">http(s)://aiilab.github.io/blog</a>来访问我的博客。简单总结一下：</p>
+<blockquote>
+<ul>
+<li>GitHub Pages有两种类型：User/Organization Pages 和 Project Pages</li>
+<li>User Pages 是用来展示用户的，而 Project Pages 是用来展示项目的。</li>
+<li>User Pages 将使用仓库的 master 分支作为页面展示，而 Project Pages 将使用 gh-pages 分支作为页面展示。</li>
+<li>User Pages 通过 <code>http(s)://username.github.io</code> 进行访问，而 Projects Pages 则通过<code>http(s)://username.github.io/projectname</code>来进行访问。   </li>
+</ul>
+</blockquote>
+<p>我们将同时利用这两种pages进行博客的设置。</p>
+<h3 id="git及github项目配置"><a href="#git及github项目配置" class="headerlink" title="git及github项目配置"></a>git及github项目配置</h3><p>前面文字太多，后面操作我就废话少说一点。以下适用于linux系统安装git,　windows用户建议用cygwin, 也可以安装<a href="http://desktop.github.com" target="_blank" rel="external">github for windows</a>, mac用户建议用homebrew安装，具体请百度。这里，我们要区分清楚git与github。git是一个版本控制的工具，而github有点类似于远程仓库，用于存放用git管理的各种项目。linux下git配置操作步骤如下：<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~</div><div class="line">sudo apt-get install git  //　安装git</div><div class="line">git config --global user.name <span class="string">"username"</span> // 我的为git config --global user.name <span class="string">"aiilab"</span></div><div class="line">git config --global user.email <span class="string">"username@example.com"</span>//我的为 <span class="string">"aiishaw@126.com"</span></div><div class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span>  //配置ssh, 运行这行代码后一路回车</div></pre></td></tr></table></figure></p>
+<p>用户主目录下，有一个.ssh文件夹，在.ssh目录下， id_rsa 和id_rsa.pub就是ssh key 的密钥对在github 账户设置里添加SSH key, 在key文本里粘贴id_rsa.pub文件的内容。即<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">gedit ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p>然后把打开文件里面的内容添加到github-&gt;Settings-&gt;SSH GPG keys-&gt;New SSH key里即可。</p>
+<p>接下来分别在github建立两个项目。分别为：</p>
+<blockquote>
+<ul>
+<li>创建名为youname.github.io仓库 ，我的为 aiilab.github.io。添加一个CNAME文件, 里面的内容为<code>www.你的域名.com</code>，我的为<code>www.aiilab.com</code>。再添加一个名为index.html的文件，里面的内容是：<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 以下方式定时转到其他页面 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"0;URL=http://blog.你的域名.com"</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>即当输入www.你的域名.com的时候，先解析aiilab.github.io的master(默认)分支的页面，此时只有一个index.html。然后自动跳转到<a href="http://blog.你的域名.com。" target="_blank" rel="external">http://blog.你的域名.com。</a></p>
+<blockquote>
+<ul>
+<li>创建一个名为blog的仓库, 并新建一个gh-pages分支，添加一个CNAME文件，添加内容为<code>blog.你的域名.com</code>，我的为<code>blog.aiilab.com</code></li>
+</ul>
+</blockquote>
+<p>即将博客仓库放在了一个project　pages当中，这样方便管理。比如，你想用music.aiilab.com、photos.aiilab.com的时候都可采用类似方法。</p>
+<h2 id="Step-3-Hexo-安装及配置"><a href="#Step-3-Hexo-安装及配置" class="headerlink" title="Step 3. Hexo 安装及配置"></a>Step 3. Hexo 安装及配置</h2><p>利用nvm安装Node.js<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh</div><div class="line">nvm install stable</div></pre></td></tr></table></figure></p>
+<p>或者，通过<a href="http://nodejs.org/" target="_blank" rel="external">installer</a>安装Nohe.js，上述两个方法选一种就ok。</p>
+<p>安装Hexo<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
+<p>Hexo配置<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">cd</span> &lt;folder&gt;</div><div class="line">hexo init</div><div class="line">sudo npm install -g hexo</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>_config.yml配置<br>打开_config.xml,添加／修改配置：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">public_dir: ../public //这就是编译产生的博客网页，这个文件夹里面的内容放到github的刚刚建立的blog仓库的gh-pages分支就ok,配置好以下命令，便可通过hexo d 一条命令实现部署</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github:你的用户名/blog.git</div><div class="line">  branch: gh-pages</div></pre></td></tr></table></figure></p>
+<p>Hexo编译<br>新建一个博客内容，用如下命令。会在souce/_post/产生一个*.md的文件夹，然后用markdown语言编写你的博客内容<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">hexo n <span class="string">"test"</span>  // hexo new <span class="string">"test"</span>,建立一篇名为<span class="built_in">test</span>的博客</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">hexo g // hexo generate 编译</div><div class="line">hexo s // hexo server 本地模拟，打开http://localhost:4000查看博客效果，如果4000端口被占用，可以利用hexo s -p 4001</div><div class="line">hexo d // hexo deploy部署到github, 可以通过www.你的域名.com进行访问了</div></pre></td></tr></table></figure>
+<p>至此，博客搭建完毕！</p>
+<h2 id="Step-4-多台电脑之间同步"><a href="#Step-4-多台电脑之间同步" class="headerlink" title="Step 4. 多台电脑之间同步"></a>Step 4. 多台电脑之间同步</h2><blockquote>
+<ul>
+<li><p>给github的blog仓库，建立两个分支，其实上述国产已经建立好。一个是<code>master</code>，一个是<code>gh-pages</code>。远端仓库blog的master分支放博客的源文档及各种主题配置，gh-pages分支用来存放生成的静态网页。具体操作如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">cd</span> blog</div><div class="line">git remote add origin git@github.com:你的用户名/blog.git //与远程仓库关联</div><div class="line">git pull origin master //拉下远程master分支，与当前（master）分支合并</div><div class="line">git add --all</div><div class="line">git commit -m <span class="string">"add new blog"</span></div><div class="line">git push -u origin master//推送自己的修改,　e.g. git push -u origin master:dev 表示将本地master分支上传至远端origin的dev 分支</div></pre></td></tr></table></figure>
+</li>
+<li><p>当在另外一台配好hexo的电脑上，直接clone下来，修改发布后提交本地修改到远程master分支就ok.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git@github.com:你的用户名/blog.git </div><div class="line">sudo npm install -g hexo</div><div class="line">npm install hexo-deployer-git --save（记得，不需要hexo init这条指令）</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>然后修改、添加博客，然后再提交就ok。这样通过git的分支功能，就非常方便的实现了多台电脑之间的同步。</p>
+<h2 id="Step-5-优化部署及管理"><a href="#Step-5-优化部署及管理" class="headerlink" title="Step 5. 优化部署及管理"></a>Step 5. 优化部署及管理</h2><blockquote>
+<ul>
+<li>更快对域名解析服务可以用dnspod</li>
+<li>因为github服务器在国外，如果博客需要大量图片的话，可以把图片放到<a href="http://portal.qiniu.com" target="_blank" rel="external">七牛</a>上。然后七牛会生生一个图片外链，将博客当中用到的图片的链接用七牛生成的图片外链代替就ok，亲测速度有明显提升。</li>
+<li>如果要更换主题，网上有很多，只需要将主题放到blog/themes文件夹下即可。然后再重新配置一下_config.yml</li>
+<li>MarkDown推荐用在线的<a href="http://www.zybuluo.com" target="_blank" rel="external">CMD MarkDown</a>，可以边写边看效果，很赞！</li>
+<li>Windows用户基本类似，遇到问题基本百度，谷歌可以搞定。如果搞不定，有问题多交流！</li>
+</ul>
+</blockquote>
+<h2 id="Step-6-Enjoy-amp-amp-PS"><a href="#Step-6-Enjoy-amp-amp-PS" class="headerlink" title="Step 6. Enjoy &amp;&amp; PS"></a>Step 6. Enjoy &amp;&amp; PS</h2><p>至此，博客折腾暂时完毕，开始你的博客之旅吧！但是需要申明的有以下几点：</p>
+<blockquote>
+<ul>
+<li><p>独立博客只是一个工具，希望大家还是把重心放在内容上</p>
+</li>
+<li><p>Github是程序员最好的基友网站，还是希望大家多贡献代码，好好维护这个社区，争取搞点高质量的东西在上面，不要被玩坏了</p>
+</li>
+<li><p>由于搭建过程当中也参考了多个博客内容，如图片、部分文字等，非常感谢大家的贡献，在此不一一说明，如有侵权，请及时告知删除！</p>
+</li>
+</ul>
+</blockquote>
+<p>Enjoy!</p>
 
                 <hr>
+                
+                <!-- 多说 Share start -->
+                <div class="ds-share"
+                     style="text-align: right"
+                     data-thread-key="2016/11/01/linux-001-hexoblog/"
+                     data-title="如何用Hexo+Github搭建个人独立博客，并实现多台电脑同步?"
+                     data-url="http://www.aiilab.com/2016/11/01/linux-001-hexoblog/"
+                     data-images="http://www.aiilab.com/2016/11/01/linux-001-hexoblog//img/post-default.jpg"
+                     data-content="如何优雅的搭建个人独立博客？前言作为一个前端小白（其实，我是一个算法工程师），想自己搭个博客来... | 张学武(Shaw)的博客 ">
+                    <div class="ds-share-inline">
+                        <ul class="ds-share-icons-16">
+                            <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                            <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                            <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                            <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                        </ul>
+                        <div class="ds-share-icons-more">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <!-- 多说 Share end-->
                 
 
                 <ul class="pager">
                     
                     <li class="previous">
                         <a href="/2016/11/06/deeplearning-001-neurons/" data-toggle="tooltip" data-placement="top"
-                           title="深度学习与神经元">&larr; Previous Post</a>
+                           title="深度学习(Deep Learning)系列之(一)：深度学习与神经元">&larr; Previous Post</a>
                     </li>
                     
                     
                 </ul>
 
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                         data-thread-key="2016/11/01/linux-001-hexoblog/"
+                         data-title="如何用Hexo+Github搭建个人独立博客，并实现多台电脑同步?"
+                         data-url="http://www.aiilab.com/2016/11/01/linux-001-hexoblog/">
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
                 
 
                 
@@ -241,7 +366,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何优雅的搭建个人独立博客？"><span class="toc-text">如何优雅的搭建个人独立博客？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本流程"><span class="toc-text">基本流程</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何优雅的搭建个人独立博客？"><span class="toc-text">如何优雅的搭建个人独立博客？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本流程"><span class="toc-text">基本流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-域名申请及配置"><span class="toc-text">Step 1. 域名申请及配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#域名申请及CNAME配置"><span class="toc-text">域名申请及CNAME配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github解析博客原理-可以跳过"><span class="toc-text">github解析博客原理(可以跳过)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-git及github设置"><span class="toc-text">Step 2. git及github设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是git"><span class="toc-text">什么是git?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是github"><span class="toc-text">什么是github?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是github-pages"><span class="toc-text">什么是github pages?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git及github项目配置"><span class="toc-text">git及github项目配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-Hexo-安装及配置"><span class="toc-text">Step 3. Hexo 安装及配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-多台电脑之间同步"><span class="toc-text">Step 4. 多台电脑之间同步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-5-优化部署及管理"><span class="toc-text">Step 5. 优化部署及管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-6-Enjoy-amp-amp-PS"><span class="toc-text">Step 6. Enjoy && PS</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -269,6 +394,9 @@
                         <a class="tag" href="/tags/#Linux"
                            title="Linux">Linux</a>
                         
+                        <a class="tag" href="/tags/#Github"
+                           title="Github">Github</a>
+                        
                     </div>
                 </section>
                 
@@ -292,6 +420,25 @@
     </div>
 </article>
 
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'aiilab';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user};
+    (function () {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
 
 
 
