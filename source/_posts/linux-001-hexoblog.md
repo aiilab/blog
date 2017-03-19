@@ -144,7 +144,7 @@ hexo d // hexo deploy部署到github, 可以通过www.你的域名.com进行访�
 ```
 至此，博客搭建完毕！
 ## Step 4. 多台电脑之间同步
->* 给github的blog仓库，建立两个分支，其实上述国产已经建立好。一个是`master`，一个是`gh-pages`。远端仓库blog的master分支放博客的源文档及各种主题配置，gh-pages分支用来存放生成的静态网页。具体操作如下：
+>* 给github的blog仓库，建立两个分支，其实上述过程已经建立好。一个是`master`，一个是`gh-pages`。远端仓库blog的master分支放博客的源文档及各种主题配置，gh-pages分支用来存放生成的静态网页。具体操作如下：
 ``` bash
 cd blog
 git remote add origin git@github.com:你的用户名/blog.git //与远程仓库关联
