@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        深度学习(Deep Learning)系列之(一)：深度学习与神经元｜张学武(Shaw)的博客
+        我的机器人系列之(三)：机器人与基于深度学习的视觉技术｜张学武(Shaw)的博客
         
     </title>
 
-    <link rel="canonical" href="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/">
+    <link rel="canonical" href="http://www.aiilab.com/2016/11/19/myrobot-003-cvrobot/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -146,13 +146,13 @@
 
 
 <img class="wechat-title-img"
-     src="http://cdnshaw.hosea.pw/img/neuron.jpg">
+     src="http://cdnshaw.hosea.pw/img/aii-001.jpg">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('http://cdnshaw.hosea.pw/img/neuron.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+        background-image: url('http://cdnshaw.hosea.pw/img/aii-001.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -163,18 +163,21 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>深度学习(Deep Learning)系列之(一)：深度学习与神经元</h1>
+                    <h1>我的机器人系列之(三)：机器人与基于深度学习的视觉技术</h1>
                     
                     <span class="meta">
                          作者 shaw
                         <span>
-                          日期 2016-11-06
+                          日期 2016-11-19
                          </span>
                     </span>
                     <div class="tags text-center">
                         
                         <a class="tag" href="/tags/#深度学习"
                            title="深度学习">深度学习</a>
+                        
+                        <a class="tag" href="/tags/#机器人"
+                           title="机器人">机器人</a>
                         
                     </div>
                 </div>
@@ -183,7 +186,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            深度学习(Deep Learning)系列之(一)：深度学习与神经元
+            我的机器人系列之(三)：机器人与基于深度学习的视觉技术
         </span>
     </div>
 </header>
@@ -194,20 +197,57 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="深度学习与神经元"><a href="#深度学习与神经元" class="headerlink" title="深度学习与神经元"></a>深度学习与神经元</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为一个AI创业公司，不来点深度学习都不好意思说自己是搞人工智能的。很多专家批评现在人工智能、深度学习各种泡沫，而在我看来有泡沫也未尝不是好事。一方面，它让人工智能的概念深入人心，另一方面，泡沫之后剩下的也将是真正的用心去搞AI的那些人。比如，世界是我们的，也是人工智能机器人的，但归根结底，还是属于那些搞机器人的：）～～。</p>
-<p>对我一个从事CV行业的人来说，我是怀着一颗敬畏之心来看待deep learning的，一方面在于它不断地刷新着我的三观，人脸识别、人体检测、人体重识别(ReID)、物体检测与识别、图像分类、图像分割、显著性检测等几乎所有与视觉相关的研究课题与问题都被深度学习统治，那些搞传统cv的同事们，辛辛苦苦二十年，一夜回到解放前。另一方面，深度学习不但在视觉    ，而且在语音识别、自然语言处理等方面也取得了显著的成绩，在特定的问题，特定场景下甚至超过了人的能力，这在几年前是不可想象的。而这些人工智能技术的发展对我们创业者，比如搞智能机器人的来说，确实带来了很大的机遇（关于机器人相关的话题，我会在后续的博客当中谈谈在创业过程当中遇到的一些问题，和一些行业的认识，欢迎大家批评指正）。</p>
-<p>深度学习其实只是实现AI应用的一把利器，一个好工具。其仍有很多问题值得去好好研究，好好思考，需要好好静心学术。然而，我关心的是如何让深度学习技术更好的落地，产生更好的应用，让机器人更智能，让最新的研究成果造福普通百姓…..这也是我想写此系列博客的初衷。一方面解读一些深度学习相关的技术原理，尽可能以通俗、工程的方式去理解这些技术和研究成果，另一方面也算脚踏实地的去学习，构建自己的深度学习知识网络，以一颗敬畏之心感受深度学习的奥秘。</p>
+                <h2 id="机器人与深度学习-视觉"><a href="#机器人与深度学习-视觉" class="headerlink" title="机器人与深度学习(视觉)"></a>机器人与深度学习(视觉)</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>深度学习目前是人工智能领域最火的技术。机器人作为人工智能最好的载体，越来越多的机器人公司也将深度学习作为自己核心的技术。在技术快速发展当下，未来机器人将会以各种各样的形态出现，广义的讲凡是具有智能的终端和设备都可以叫做机器人。当然，这里所谓的智能至少是可以和人一样通过视觉、听觉等感知智能系统从世界获取数据并进行处理。就目前来说，服务机器人用到的人工智能的技术有：<code>计算机视觉</code>、<code>语音识别/合成</code>、<code>自然语言处理</code>等。基本上，这三种人工智能技术主要也是深度学习的天下。在此以视觉为例，主要谈谈机器人与深度学习的结合。</p>
+<h2 id="相互关系"><a href="#相互关系" class="headerlink" title="相互关系"></a>相互关系</h2><p>视觉能为机器人带来什么？机器人为什么开始越来越重视视觉？视觉解决了哪些问题？目前来看，深度学习首先在视觉上取得了颠覆式的效果。这在几年前是完全不可想象的，如今机器人火热的一个重要因素也是因为深度学习确实为人工智能机器人创造了很多必要条件（视觉，语音识别、自然语言处理）。机器人视觉是相当于机器人的眼睛(这里就不说大脑了)，人的80%的信息来自视觉，所以视觉对机器人来说更加重要。机器人视觉也有几个层次，业内普遍的一个共识是<code>感知-&gt;认知</code>的过程。在这里不得不提一下计算机视觉的开创者之一：David Marr。</p>
+<p>David Marr 【1945-1980】，中文音译为马尔，1972年从剑桥大学毕业，博士论文是从理论的角度研究大脑功能，具体来说，是研究的小脑， 主管运动的Cerebellum。 他奠定了这个领域叫做Computational Vision计算视觉，这包含了两个领域： 一个就是计算机视觉（Computer Vision），一个是计算神经学（Computational Neuroscience）。不过天妒英才，马尔35岁就去世了，但是在他去世之前，赶紧整理了一本书：“Vision：A Computational Investigation into the HumanRepresentation and Processing of Visual Information”, 《视觉：从计算的视角研究人的视觉信息表达与处理》。他去世后由学生和同事修订，1982年出版。</p>
+<p>虽然目前深度学习虽然在分类、识别方面取得了一定的成果，然而对于机器人来讲，这不仅仅是一个分类问题，真正意义的视觉应该是从机器人目前面临的任务而去决定它要计算什么。当然，这是一个很严肃的学术问题，即使深度学习也解释不了很多问题。深度学习为机器人视觉带来了一些实际的应用，但是要想在机器人视觉有相当大的突破还需要科学家耐心的研究。而我们目前将视觉分为分类、识别、检测、分割等任务，一方面为了实际的业务需要，从另一方面说其实是对视觉理论还没有完全研究清楚。略显无奈，缺又欣喜。总之，什么阶段的视觉，将为机器人提供什么阶段的视觉能力。而现在，是工业界可以大展身手的时候。</p>
+<h2 id="目前现状"><a href="#目前现状" class="headerlink" title="目前现状"></a>目前现状</h2><p>虽然深度学习在视觉各个细分领域比如人脸、人体、物体识别、图像分割等多个研究方向上取得了很好的效果，但是深挖一下国内的服务机器人公司，其深度学习的应用还是大部分基于<strong>云端</strong>, 基本上服务机器人的<strong>语音识别与合成方案</strong>一般采用讯飞、思必驰等公司的方案(机器人上面一般会加一个<strong>声源定位</strong>的模块，一般选择环形６麦的方案，可实现360度生源定位)，而自然语言处理一般采用图灵、薄言豆豆、三角兽等很多家的方案。其依赖云端的首要好处是成本低，不需要太强的硬件支持。但是缺点也很明显：</p>
+<blockquote>
+<ul>
+<li>1、依赖网络，网络不好体验差，没有网络不工作</li>
+<li>2、同质化现象很严重,　产品无黏性，就是没有投资人老说的<code>刚需</code>。</li>
+</ul>
+</blockquote>
+<p>再来看看机器人相关的视觉，在我的另外一篇博文中，提到过按照视觉交互来分，视觉这块在机器人当中主要有以下８类：</p>
+<blockquote>
+<ul>
+<li>人脸技术（人脸检测、特征点、人脸识别、人脸属性）</li>
+<li>人体技术（人体检测、人体朝向、人体跟踪、人体重实别(ReID)等）</li>
+<li>情感技术（表情分类、强度分析，在此涉及 <code>语调情感</code>和<code>文本情感</code>,一个完整的情感分析系统需要这三种）</li>
+<li>跟踪技术（单目标跟踪、人脸跟踪、人体跟踪、任一目标跟踪）</li>
+<li>物体检测与识别（图像分类、目标检测与定位）</li>
+<li>行为分析（手势识别、RGB/RGBD等）</li>
+<li>立体视觉（双目、结构光等）</li>
+<li>AR/VR　（如寒武纪小武机器人根据人脸特征点进行趣味拍照的功能，算是一个AR的应用，PS:利益相关，人艰不拆）</li>
+</ul>
+</blockquote>
+<p>上述８类技术几乎都是深度学习一统天下，并取得了不错的效果，但是却很少看到市面上有机器人采用了视觉相关的技术，究其原因最主要的还是<code>计算资源的限制</code>。</p>
+<p>终所周知，深度学习效果虽好，但其计算复杂度相对于传统算法来说还是比较大，要想在嵌入式设备当中运行相对实时的视觉运算，挑战很大。当然你可能会说：瞎说，我明明看到有机器人就有你说的这些技术，还都是用深度学习技术。呵呵，你也不看看目前看到的机器人(注意是<code>目前</code>)所采用的是啥配置,卖多少钱。即使像Nvidia、Movidius、Intel等公司推出针对深度学习优化的各种GPU、VPU等，但是其实真正在产品当中采用会面临很多问题。比如，Nvidia的jetson tx1, 核心模块造价达300刀，其性能确实能够将很多深度学习技术添加上去，但是对于一个2C的产品，还是有点高。另外很多深度学习算法也无法实时。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>目前，业内一个主流的趋势是将人工智能，即深度学习的一些技术部署在终端设备上。比如，人脸识别，目前已经有公司可以将整个人脸识别的流程（检测＋特征点＋识别＋属性）全部放在终端上，并且优化到嵌入式设备上，普通手机也可运行深度学习，这带来效果和应用的提升是非常巨大的。那么如何提升深度学习在机器人(智能终端设备)的应用，目前来看，主要以下几种方法：</p>
+<blockquote>
+<ul>
+<li><p>1、算法改进。本质上是对网络的改进，由于深度学习本身的特性和优势，可以将很多单独研究的问题可以统一起来进行端到端的学习，比如目标检测与识别经典的CNN-&gt;RCNN-&gt;Fast RCNN-&gt;Faster RCNN框架。比如人脸识别当中，检测、特征点、识别可以共享特征，可以端到端进行学习，减少了算法当中的模块，从而提高了算法的效率。</p>
+</li>
+<li><p>2、模型压缩。深度学习因为参数较多，导致模型文件很大，几百兆的模型比较常见，这就带来一个问题，如何进行深度学习模型的压缩，学术上也在研究这个问题。总之，我们希望模型文件越小越好，从而减少内存、CPU等资源消耗。</p>
+</li>
+<li><p>3、场景数据。目前算法的研究一般采用的还是大量的通用数据，一般都是从互联网上得到的。但是行业应用却面临各个场景。比如，视觉交互当中人脸识别在机器人就会面临视角、光线、角度、表情、低分辨率、遮挡、摄像头清晰度等问题。比如针对小孩的教育陪护型机器人就会面临小孩发声不完全、频率、口齿不清楚等问题。而深度学习训练的模型都是通用数据，在特定场景下应用必然会有一些问题。目前的解决方案是首先利用通用数据训练模型，然后部署。其次，攒一定数据后，利用特定场景的敏感数据去升级模型，然后再重新部署，进行迭代，通过一套反馈的流程和机制不断提升在终端上的效果。另外，场景数据对模型压缩也非常重要。</p>
+</li>
+<li>4、工程优化。工程优化再这里着重提一下。很多做算法的可能不关心这个问题，但是这个问题在实际做产品的时候异常重要。实际做产品，平台选择考虑的因素很多，如何把所选的平台的性能优势都发挥出来才是最经济实惠的。所以，同样的算法，同样的平台，有的可以实时，有的却很卡很慢，无奈再换更强的平台，这就明显拉开了差距。所以专门做视觉的一些公司要么有专门的异构并行计算部门，要么有专门针对各个平台，如ARM/X86/GPU等平台优化的专家。包括Nvidia推出的针对嵌入式平台的库，cuda、cudnn、tensorRT、visionworks等。目前，也能看到一些千元嵌入式设备当中也逐渐将深度学习跑了起来。可以看到的是基于深度学习的人脸技术已经完全可以在千元手机当中不依赖云端本地实时的跑了，后续人体、手势、物体识别我相信也会能够在嵌入式设备当中实时运行起来。不仅仅视觉，包括语音、自然语音处理，基本上本地＋云端会是一个趋势；而视觉实时性要求很高，本地化将是趋势。</li>
+</ul>
+</blockquote>
+<p>总结一下，深度学习在机器人当中大量应用的一些必要条件是４个：<code>算法改进</code>、<code>模型优化</code>、<code>场景数据</code>、<code>工程优化</code>。</p>
+<p>end</p>
 
                 <hr>
                 
                 <!-- 多说 Share start -->
                 <div class="ds-share"
                      style="text-align: right"
-                     data-thread-key="2016/11/06/deeplearning-001-neurons/"
-                     data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
-                     data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/"
-                     data-images="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons//img/neuron.jpg"
-                     data-content="深度学习与神经元前言深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为... | 张学武(Shaw)的博客 ">
+                     data-thread-key="2016/11/19/myrobot-003-cvrobot/"
+                     data-title="我的机器人系列之(三)：机器人与基于深度学习的视觉技术"
+                     data-url="http://www.aiilab.com/2016/11/19/myrobot-003-cvrobot/"
+                     data-images="http://www.aiilab.com/2016/11/19/myrobot-003-cvrobot//img/aii-001.jpg"
+                     data-content="机器人与深度学习(视觉)前言深度学习目前是人工智能领域最火的技术。机器人作为人工智能最好的载体... | 张学武(Shaw)的博客 ">
                     <div class="ds-share-inline">
                         <ul class="ds-share-icons-16">
                             <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -226,14 +266,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/11/09/myrobot-001-basics/" data-toggle="tooltip" data-placement="top"
-                           title="我的机器人系列之(一)：家庭服务机器人？">&larr; Previous Post</a>
+                        <a href="/2016/11/28/android-001-install/" data-toggle="tooltip" data-placement="top"
+                           title="ubuntu14.04配置android开发环境">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2016/11/01/linux-001-hexoblog/" data-toggle="tooltip" data-placement="top"
-                           title="如何用Hexo+Github搭建个人独立博客，并实现多台电脑同步?">Next Post &rarr;</a>
+                        <a href="/2016/11/10/myrobot-002-enrobot/" data-toggle="tooltip" data-placement="top"
+                           title="我的机器人系列之(二)：家庭服务机器人常见英语词汇">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -242,9 +282,9 @@
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
-                         data-thread-key="2016/11/06/deeplearning-001-neurons/"
-                         data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
-                         data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/">
+                         data-thread-key="2016/11/19/myrobot-003-cvrobot/"
+                         data-title="我的机器人系列之(三)：机器人与基于深度学习的视觉技术"
+                         data-url="http://www.aiilab.com/2016/11/19/myrobot-003-cvrobot/">
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
@@ -256,7 +296,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习与神经元"><span class="toc-text">深度学习与神经元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#机器人与深度学习-视觉"><span class="toc-text">机器人与深度学习(视觉)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相互关系"><span class="toc-text">相互关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目前现状"><span class="toc-text">目前现状</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-text">解决方案</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -280,6 +320,9 @@
                         
                         <a class="tag" href="/tags/#深度学习"
                            title="深度学习">深度学习</a>
+                        
+                        <a class="tag" href="/tags/#机器人"
+                           title="机器人">机器人</a>
                         
                     </div>
                 </section>

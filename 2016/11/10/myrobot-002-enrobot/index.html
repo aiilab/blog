@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        深度学习(Deep Learning)系列之(一)：深度学习与神经元｜张学武(Shaw)的博客
+        我的机器人系列之(二)：家庭服务机器人常见英语词汇｜张学武(Shaw)的博客
         
     </title>
 
-    <link rel="canonical" href="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/">
+    <link rel="canonical" href="http://www.aiilab.com/2016/11/10/myrobot-002-enrobot/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -146,13 +146,13 @@
 
 
 <img class="wechat-title-img"
-     src="http://cdnshaw.hosea.pw/img/neuron.jpg">
+     src="http://cdnshaw.hosea.pw/img/aii-004.jpg">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('http://cdnshaw.hosea.pw/img/neuron.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+        background-image: url('http://cdnshaw.hosea.pw/img/aii-004.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -163,18 +163,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>深度学习(Deep Learning)系列之(一)：深度学习与神经元</h1>
+                    <h1>我的机器人系列之(二)：家庭服务机器人常见英语词汇</h1>
                     
                     <span class="meta">
                          作者 shaw
                         <span>
-                          日期 2016-11-06
+                          日期 2016-11-10
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
+                        <a class="tag" href="/tags/#机器人"
+                           title="机器人">机器人</a>
                         
                     </div>
                 </div>
@@ -183,7 +183,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            深度学习(Deep Learning)系列之(一)：深度学习与神经元
+            我的机器人系列之(二)：家庭服务机器人常见英语词汇
         </span>
     </div>
 </header>
@@ -194,20 +194,189 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="深度学习与神经元"><a href="#深度学习与神经元" class="headerlink" title="深度学习与神经元"></a>深度学习与神经元</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为一个AI创业公司，不来点深度学习都不好意思说自己是搞人工智能的。很多专家批评现在人工智能、深度学习各种泡沫，而在我看来有泡沫也未尝不是好事。一方面，它让人工智能的概念深入人心，另一方面，泡沫之后剩下的也将是真正的用心去搞AI的那些人。比如，世界是我们的，也是人工智能机器人的，但归根结底，还是属于那些搞机器人的：）～～。</p>
-<p>对我一个从事CV行业的人来说，我是怀着一颗敬畏之心来看待deep learning的，一方面在于它不断地刷新着我的三观，人脸识别、人体检测、人体重识别(ReID)、物体检测与识别、图像分类、图像分割、显著性检测等几乎所有与视觉相关的研究课题与问题都被深度学习统治，那些搞传统cv的同事们，辛辛苦苦二十年，一夜回到解放前。另一方面，深度学习不但在视觉    ，而且在语音识别、自然语言处理等方面也取得了显著的成绩，在特定的问题，特定场景下甚至超过了人的能力，这在几年前是不可想象的。而这些人工智能技术的发展对我们创业者，比如搞智能机器人的来说，确实带来了很大的机遇（关于机器人相关的话题，我会在后续的博客当中谈谈在创业过程当中遇到的一些问题，和一些行业的认识，欢迎大家批评指正）。</p>
-<p>深度学习其实只是实现AI应用的一把利器，一个好工具。其仍有很多问题值得去好好研究，好好思考，需要好好静心学术。然而，我关心的是如何让深度学习技术更好的落地，产生更好的应用，让机器人更智能，让最新的研究成果造福普通百姓…..这也是我想写此系列博客的初衷。一方面解读一些深度学习相关的技术原理，尽可能以通俗、工程的方式去理解这些技术和研究成果，另一方面也算脚踏实地的去学习，构建自己的深度学习知识网络，以一颗敬畏之心感受深度学习的奥秘。</p>
+                <h2 id="服务机器人常见词汇"><a href="#服务机器人常见词汇" class="headerlink" title="服务机器人常见词汇"></a>服务机器人常见词汇</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在家庭服务机器人领域，我比较关注儿童和老人这两个市场。孩子的教育和老人看护有着巨大的市场，目前在市面上看到的家庭服务机器人基本都在关注这些问题，但是实际上做的好的缺并不多。当然，这里面的坑也很多，改天可以谈谈这个问题。今天主要谈谈在家庭服务机器人当中常见的那些英语词汇，因设计那边要我翻译一些官方的表述，在此简单记录翻译。由于本人水平有限，如有更好翻译，欢迎多交流！本人邮箱<code>aiishaw@126.com</code></p>
+<h2 id="服务机器人"><a href="#服务机器人" class="headerlink" title="服务机器人"></a>服务机器人</h2><h3 id="儿童教育陪伴机器人"><a href="#儿童教育陪伴机器人" class="headerlink" title="儿童教育陪伴机器人"></a>儿童教育陪伴机器人</h3><table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>儿童早教陪护机器人</td>
+<td>children’s companion and education robot</td>
+</tr>
+<tr>
+<td>自主抓拍</td>
+<td>smart snapshot photography</td>
+</tr>
+<tr>
+<td>情感互动</td>
+<td>emotional interaction</td>
+</tr>
+<tr>
+<td>智能跟随</td>
+<td>intelligent following</td>
+</tr>
+<tr>
+<td>自主抓拍</td>
+<td>smart snapshot photography</td>
+</tr>
+<tr>
+<td>情感互动</td>
+<td>emotional interaction</td>
+</tr>
+<tr>
+<td>智能跟随</td>
+<td>intelligent following</td>
+</tr>
+<tr>
+<td>自动跟随</td>
+<td>automatically follow</td>
+</tr>
+<tr>
+<td>科学早教</td>
+<td>early childhood education</td>
+</tr>
+<tr>
+<td>教育娱乐</td>
+<td>educational content and entertainment</td>
+</tr>
+<tr>
+<td>智能录像</td>
+<td>smart recording</td>
+</tr>
+<tr>
+<td>笑脸抓拍</td>
+<td>smile capture</td>
+</tr>
+<tr>
+<td>人脸跟踪</td>
+<td>face tracking</td>
+</tr>
+<tr>
+<td>即时编辑</td>
+<td>live editing</td>
+</tr>
+<tr>
+<td>远程看护</td>
+<td>remote nursing</td>
+</tr>
+<tr>
+<td>科学早教</td>
+<td>early childhood education</td>
+</tr>
+<tr>
+<td>主动抓拍</td>
+<td>smart snapshot photography</td>
+</tr>
+<tr>
+<td>互动交流</td>
+<td>interactive communication</td>
+</tr>
+<tr>
+<td>自录机器人</td>
+<td>self Recording Robot</td>
+</tr>
+<tr>
+<td>高清(音)视频(通话)</td>
+<td>HD Voice &amp; Video Calling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="老人看护陪伴机器人"><a href="#老人看护陪伴机器人" class="headerlink" title="老人看护陪伴机器人"></a>老人看护陪伴机器人</h3><table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>助(养)老机器人</td>
+<td>robot for the disabled and the elderly</td>
+</tr>
+<tr>
+<td>远程监控</td>
+<td>remote monitoring</td>
+</tr>
+<tr>
+<td>跳舞机器人</td>
+<td>dancing robot</td>
+</tr>
+<tr>
+<td>商用机器人</td>
+<td>commercial robot</td>
+</tr>
+<tr>
+<td>自主巡逻</td>
+<td>autonomous patrol</td>
+</tr>
+<tr>
+<td>异常报警</td>
+<td>abnormal alarm</td>
+</tr>
+<tr>
+<td>家庭医疗</td>
+<td>Family Home Health</td>
+</tr>
+<tr>
+<td>健康管理</td>
+<td>health management</td>
+</tr>
+<tr>
+<td>娱乐陪伴</td>
+<td>entertainment and companion</td>
+</tr>
+<tr>
+<td>自动充电</td>
+<td>automatic charging</td>
+</tr>
+<tr>
+<td>智能问询</td>
+<td>intelligent inquiries</td>
+</tr>
+<tr>
+<td>摔倒检测</td>
+<td>fall detection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="技术词汇相关"><a href="#技术词汇相关" class="headerlink" title="技术词汇相关"></a>技术词汇相关</h3><table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人脸识别</td>
+<td>face recognition</td>
+</tr>
+<tr>
+<td>基于深度学习的面部分析技术</td>
+<td>facial analysis with deep learning</td>
+</tr>
+<tr>
+<td>基于深度学习的目标检测与物体识别</td>
+<td>object detection and recognition with deep neural networks</td>
+</tr>
+</tbody>
+</table>
+<p>…未完，持续更新</p>
 
                 <hr>
                 
                 <!-- 多说 Share start -->
                 <div class="ds-share"
                      style="text-align: right"
-                     data-thread-key="2016/11/06/deeplearning-001-neurons/"
-                     data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
-                     data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/"
-                     data-images="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons//img/neuron.jpg"
-                     data-content="深度学习与神经元前言深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为... | 张学武(Shaw)的博客 ">
+                     data-thread-key="2016/11/10/myrobot-002-enrobot/"
+                     data-title="我的机器人系列之(二)：家庭服务机器人常见英语词汇"
+                     data-url="http://www.aiilab.com/2016/11/10/myrobot-002-enrobot/"
+                     data-images="http://www.aiilab.com/2016/11/10/myrobot-002-enrobot//img/aii-004.jpg"
+                     data-content="服务机器人常见词汇前言在家庭服务机器人领域，我比较关注儿童和老人这两个市场。孩子的教育和老人看... | 张学武(Shaw)的博客 ">
                     <div class="ds-share-inline">
                         <ul class="ds-share-icons-16">
                             <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -226,14 +395,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/11/09/myrobot-001-basics/" data-toggle="tooltip" data-placement="top"
-                           title="我的机器人系列之(一)：家庭服务机器人？">&larr; Previous Post</a>
+                        <a href="/2016/11/19/myrobot-003-cvrobot/" data-toggle="tooltip" data-placement="top"
+                           title="我的机器人系列之(三)：机器人与基于深度学习的视觉技术">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2016/11/01/linux-001-hexoblog/" data-toggle="tooltip" data-placement="top"
-                           title="如何用Hexo+Github搭建个人独立博客，并实现多台电脑同步?">Next Post &rarr;</a>
+                        <a href="/2016/11/09/myrobot-001-basics/" data-toggle="tooltip" data-placement="top"
+                           title="我的机器人系列之(一)：家庭服务机器人？">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -242,9 +411,9 @@
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
-                         data-thread-key="2016/11/06/deeplearning-001-neurons/"
-                         data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
-                         data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/">
+                         data-thread-key="2016/11/10/myrobot-002-enrobot/"
+                         data-title="我的机器人系列之(二)：家庭服务机器人常见英语词汇"
+                         data-url="http://www.aiilab.com/2016/11/10/myrobot-002-enrobot/">
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
@@ -256,7 +425,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习与神经元"><span class="toc-text">深度学习与神经元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#服务机器人常见词汇"><span class="toc-text">服务机器人常见词汇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务机器人"><span class="toc-text">服务机器人</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#儿童教育陪伴机器人"><span class="toc-text">儿童教育陪伴机器人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#老人看护陪伴机器人"><span class="toc-text">老人看护陪伴机器人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#技术词汇相关"><span class="toc-text">技术词汇相关</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -278,8 +447,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
+                        <a class="tag" href="/tags/#机器人"
+                           title="机器人">机器人</a>
                         
                     </div>
                 </section>

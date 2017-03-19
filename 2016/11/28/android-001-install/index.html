@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        深度学习(Deep Learning)系列之(一)：深度学习与神经元｜张学武(Shaw)的博客
+        ubuntu14.04配置android开发环境｜张学武(Shaw)的博客
         
     </title>
 
-    <link rel="canonical" href="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/">
+    <link rel="canonical" href="http://www.aiilab.com/2016/11/28/android-001-install/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -146,13 +146,13 @@
 
 
 <img class="wechat-title-img"
-     src="http://cdnshaw.hosea.pw/img/neuron.jpg">
+     src="http://cdnshaw.hosea.pw/img/post-default.jpg">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('http://cdnshaw.hosea.pw/img/neuron.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+        background-image: url('http://cdnshaw.hosea.pw/img/post-default.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -163,18 +163,21 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>深度学习(Deep Learning)系列之(一)：深度学习与神经元</h1>
+                    <h1>ubuntu14.04配置android开发环境</h1>
                     
                     <span class="meta">
                          作者 shaw
                         <span>
-                          日期 2016-11-06
+                          日期 2016-11-28
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
+                        <a class="tag" href="/tags/#Linux"
+                           title="Linux">Linux</a>
+                        
+                        <a class="tag" href="/tags/#Android"
+                           title="Android">Android</a>
                         
                     </div>
                 </div>
@@ -183,7 +186,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            深度学习(Deep Learning)系列之(一)：深度学习与神经元
+            ubuntu14.04配置android开发环境
         </span>
     </div>
 </header>
@@ -194,20 +197,40 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="深度学习与神经元"><a href="#深度学习与神经元" class="headerlink" title="深度学习与神经元"></a>深度学习与神经元</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为一个AI创业公司，不来点深度学习都不好意思说自己是搞人工智能的。很多专家批评现在人工智能、深度学习各种泡沫，而在我看来有泡沫也未尝不是好事。一方面，它让人工智能的概念深入人心，另一方面，泡沫之后剩下的也将是真正的用心去搞AI的那些人。比如，世界是我们的，也是人工智能机器人的，但归根结底，还是属于那些搞机器人的：）～～。</p>
-<p>对我一个从事CV行业的人来说，我是怀着一颗敬畏之心来看待deep learning的，一方面在于它不断地刷新着我的三观，人脸识别、人体检测、人体重识别(ReID)、物体检测与识别、图像分类、图像分割、显著性检测等几乎所有与视觉相关的研究课题与问题都被深度学习统治，那些搞传统cv的同事们，辛辛苦苦二十年，一夜回到解放前。另一方面，深度学习不但在视觉    ，而且在语音识别、自然语言处理等方面也取得了显著的成绩，在特定的问题，特定场景下甚至超过了人的能力，这在几年前是不可想象的。而这些人工智能技术的发展对我们创业者，比如搞智能机器人的来说，确实带来了很大的机遇（关于机器人相关的话题，我会在后续的博客当中谈谈在创业过程当中遇到的一些问题，和一些行业的认识，欢迎大家批评指正）。</p>
-<p>深度学习其实只是实现AI应用的一把利器，一个好工具。其仍有很多问题值得去好好研究，好好思考，需要好好静心学术。然而，我关心的是如何让深度学习技术更好的落地，产生更好的应用，让机器人更智能，让最新的研究成果造福普通百姓…..这也是我想写此系列博客的初衷。一方面解读一些深度学习相关的技术原理，尽可能以通俗、工程的方式去理解这些技术和研究成果，另一方面也算脚踏实地的去学习，构建自己的深度学习知识网络，以一颗敬畏之心感受深度学习的奥秘。</p>
+                <h2 id="如何在linux下搭建android开发环境？"><a href="#如何在linux下搭建android开发环境？" class="headerlink" title="如何在linux下搭建android开发环境？"></a>如何在linux下搭建android开发环境？</h2><h2 id="一、JDK配置"><a href="#一、JDK配置" class="headerlink" title="一、JDK配置"></a>一、JDK配置</h2><h3 id="1、软件下载"><a href="#1、软件下载" class="headerlink" title="1、软件下载"></a>1、软件下载</h3><p>在<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">Oracle官网</a>下载对应系统版本的jdk, 我的下载后的软件为<code>jdk-8u111-linux-x64.tar.gz</code>，然后用以下命令解压：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">tar -xvf ~/Downloads/jdk-8u111-linux-x64.tar.gz　#解压jdk，解压后在相同目录里有一个文件夹</div><div class="line">sudo mkdir -p /usr/local/jvm      #新建一个文件夹</div><div class="line">sudo mv jdk1.8.0  /usr/local/jvm/jdk1.8.0_111 #把解压的 JDK 文件内容都移动到创建的目录中</div></pre></td></tr></table></figure></p>
+<h3 id="2、添加jdk到系统环境变量"><a href="#2、添加jdk到系统环境变量" class="headerlink" title="2、添加jdk到系统环境变量"></a>2、添加jdk到系统环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">cp /etc/profile /etc/profile.bak <span class="comment">#备份</span></div><div class="line">sudo vim /etc/profile <span class="comment">#编辑,在最后添加下面的内容</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">export JAVA_HOME=/usr/local/jvm/jdk1.8.0_111</div><div class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre </div><div class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib </div><div class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">source /etc/profile 　　　#使配置文件立即生效</div></pre></td></tr></table></figure>
+<p>由于系统中可能会有默认的其他版本JDK，所以，为了将我们安装的JDK设置为默认JDK版本，还要进行如下工作。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo update-alternatives --install /usr/bin/java java /usr/local/jvm/jdk1.8.0_111/bin/java 1  </div><div class="line">sudo update-alternatives --install /usr/bin/javac  javac /usr/local/jvm/jdk1.8.0_111/bin/javac 1</div></pre></td></tr></table></figure></p>
+<p>执行下面命令，设置默认版本，此命令执行后，系统会列出当前存在的各种JDK版本，会提示你选择,然后根据提升选择编号。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo update-alternatives --config java</div></pre></td></tr></table></figure></p>
+<h3 id="3、测试是否OK"><a href="#3、测试是否OK" class="headerlink" title="3、测试是否OK"></a>3、测试是否OK</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">java -version # 测试是否成功</div></pre></td></tr></table></figure>
+<p>如果ok,会出现以下信息：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">java version &quot;1.8.0_111&quot;</div><div class="line">Java(TM) SE Runtime Environment (build 1.8.0_111-b14)</div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.111-b14, mixed mode)</div></pre></td></tr></table></figure></p>
+<h2 id="二、Android-Studio下载和配置"><a href="#二、Android-Studio下载和配置" class="headerlink" title="二、Android Studio下载和配置"></a>二、Android Studio下载和配置</h2><h3 id="1、软件下载-1"><a href="#1、软件下载-1" class="headerlink" title="1、软件下载"></a>1、软件下载</h3><p>android studio的安装可以按照官方网站<a href="https://developer.android.com/studio/install.html" target="_blank" rel="external">推荐操作</a>进行。我下载的版本为<code>android-studio-ide-145.3360264-linux.zip</code>，然后按操作执行：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">unzip android-studio-ide-145.3360264-linux.zip</div><div class="line">sudo android-studio /usr/local</div><div class="line">cd /usr/local/android-studio/bin</div><div class="line">./studio.sh #选择是否想要导入之前的 Android Studio 设置，然后点击 OK</div></pre></td></tr></table></figure></p>
+<p>注意, 在/etc/profile里添加以下内容即可通过终端输入<code>studio.sh</code>打开<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">export ANDROID_STUDIO=/usr/local/android-studio</div><div class="line">export PATH=$&#123;ANDROID_STUDIO&#125;/bin:$PATH</div></pre></td></tr></table></figure></p>
+<p>之后 Android Studio 设置向导将指导您完成余下的设置，包括下载开发所需的 Android SDK 组件。</p>
+<blockquote>
+<ul>
+<li><p>注：如果您运行的是 64 位版本 Ubuntu，则您需要使用以下命令安装一些 32 位库：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果您运行的是 64 位版本的 Fedora，则所用命令为：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo yum install zlib.i686 ncurses-libs.i686 bzip2-libs.i686</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h3 id="2、配置android-sdk"><a href="#2、配置android-sdk" class="headerlink" title="2、配置android sdk"></a>2、配置android sdk</h3><p>按照默认操作会将android sdk　默认下载到~/Android文件夹下面,在 <code>file-&gt;Other Settings-&gt;Default Project Structure</code>下可设置jdk路径，以及更新ndk.</p>
+<p>over, enjoy it~</p>
 
                 <hr>
                 
                 <!-- 多说 Share start -->
                 <div class="ds-share"
                      style="text-align: right"
-                     data-thread-key="2016/11/06/deeplearning-001-neurons/"
-                     data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
-                     data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/"
-                     data-images="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons//img/neuron.jpg"
-                     data-content="深度学习与神经元前言深度学习(Deep Learning)是现如今人工智能领域最火的技术，作为... | 张学武(Shaw)的博客 ">
+                     data-thread-key="2016/11/28/android-001-install/"
+                     data-title="ubuntu14.04配置android开发环境"
+                     data-url="http://www.aiilab.com/2016/11/28/android-001-install/"
+                     data-images="http://www.aiilab.com/2016/11/28/android-001-install//img/post-default.jpg"
+                     data-content="如何在linux下搭建android开发环境？一、JDK配置1、软件下载在Oracle官网下载... | 张学武(Shaw)的博客 ">
                     <div class="ds-share-inline">
                         <ul class="ds-share-icons-16">
                             <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -226,14 +249,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/11/09/myrobot-001-basics/" data-toggle="tooltip" data-placement="top"
-                           title="我的机器人系列之(一)：家庭服务机器人？">&larr; Previous Post</a>
+                        <a href="/2017/02/07/myrobot-004-sound/" data-toggle="tooltip" data-placement="top"
+                           title="我的机器人系列之(四)：什么是麦克风阵列技术？">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2016/11/01/linux-001-hexoblog/" data-toggle="tooltip" data-placement="top"
-                           title="如何用Hexo+Github搭建个人独立博客，并实现多台电脑同步?">Next Post &rarr;</a>
+                        <a href="/2016/11/19/myrobot-003-cvrobot/" data-toggle="tooltip" data-placement="top"
+                           title="我的机器人系列之(三)：机器人与基于深度学习的视觉技术">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -242,9 +265,9 @@
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
-                         data-thread-key="2016/11/06/deeplearning-001-neurons/"
-                         data-title="深度学习(Deep Learning)系列之(一)：深度学习与神经元"
-                         data-url="http://www.aiilab.com/2016/11/06/deeplearning-001-neurons/">
+                         data-thread-key="2016/11/28/android-001-install/"
+                         data-title="ubuntu14.04配置android开发环境"
+                         data-url="http://www.aiilab.com/2016/11/28/android-001-install/">
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
@@ -256,7 +279,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习与神经元"><span class="toc-text">深度学习与神经元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何在linux下搭建android开发环境？"><span class="toc-text">如何在linux下搭建android开发环境？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、JDK配置"><span class="toc-text">一、JDK配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、软件下载"><span class="toc-text">1、软件下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、添加jdk到系统环境变量"><span class="toc-text">2、添加jdk到系统环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、测试是否OK"><span class="toc-text">3、测试是否OK</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Android-Studio下载和配置"><span class="toc-text">二、Android Studio下载和配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、软件下载-1"><span class="toc-text">1、软件下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、配置android-sdk"><span class="toc-text">2、配置android sdk</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -278,8 +301,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
+                        <a class="tag" href="/tags/#Linux"
+                           title="Linux">Linux</a>
+                        
+                        <a class="tag" href="/tags/#Android"
+                           title="Android">Android</a>
                         
                     </div>
                 </section>

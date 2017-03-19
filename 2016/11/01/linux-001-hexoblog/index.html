@@ -79,14 +79,6 @@
                     
                         
 							
-                        <li>
-                            <a href="/Tags/">Tags</a>
-                        </li>
-							
-						
-                    
-                        
-							
 								
 							
 						
@@ -95,6 +87,14 @@
 							
                         <li>
                             <a href="/text/">text</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
 							
 						
@@ -282,7 +282,7 @@
 <p>至此，博客搭建完毕！</p>
 <h2 id="Step-4-多台电脑之间同步"><a href="#Step-4-多台电脑之间同步" class="headerlink" title="Step 4. 多台电脑之间同步"></a>Step 4. 多台电脑之间同步</h2><blockquote>
 <ul>
-<li><p>给github的blog仓库，建立两个分支，其实上述国产已经建立好。一个是<code>master</code>，一个是<code>gh-pages</code>。远端仓库blog的master分支放博客的源文档及各种主题配置，gh-pages分支用来存放生成的静态网页。具体操作如下：</p>
+<li><p>给github的blog仓库，建立两个分支，其实上述过程已经建立好。一个是<code>master</code>，一个是<code>gh-pages</code>。远端仓库blog的master分支放博客的源文档及各种主题配置，gh-pages分支用来存放生成的静态网页。具体操作如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">cd</span> blog</div><div class="line">git remote add origin git@github.com:你的用户名/blog.git //与远程仓库关联</div><div class="line">git pull origin master //拉下远程master分支，与当前（master）分支合并</div><div class="line">git add --all</div><div class="line">git commit -m <span class="string">"add new blog"</span></div><div class="line">git push -u origin master//推送自己的修改,　e.g. git push -u origin master:dev 表示将本地master分支上传至远端origin的dev 分支</div></pre></td></tr></table></figure>
 </li>
 <li><p>当在另外一台配好hexo的电脑上，直接clone下来，修改发布后提交本地修改到远程master分支就ok.</p>
@@ -475,7 +475,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; 张学武(Shaw) 2016
+                    Copyright &copy; 张学武(Shaw) 2017
                     <br>
                     <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
